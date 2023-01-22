@@ -360,10 +360,19 @@
 </div>
         </div>
       </section>
-      <!-- modal -->
+<!-- modal -->
       <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-          <button class="close" data-modal-close></button>
+          <button class="close" data-modal-close>
+              <svg class="close-icon">
+              <use href="./img/symbol-defs.svg#icon-close"></use>
+            </svg>
+
+              <svg class="variant-icon">
+                <use href="./img/symbol-defs.svg#icon-close-2"></use>
+              </svg>
+
+          </button>
           <h1 class="form-title">Leave your contacts and we will call you back</h1>
           <div>
           <form class="form">
@@ -371,32 +380,25 @@
               <label for="name" class="title-label">Name</label>
               </label>
                 <input type="text" name="Name" id="name" class="form-size"/>
-              
-              <span for="name" class="icon-label">
                 <svg class="icon-form">
                   <use href="./img/icon-sprite.svg#icon-person-black-18dp-1"></use>
                 </svg>
-              </span>
             </div>
 
             <div class="form-field">
               <label for="phone" class="title-label">Phone</label>
               <input type="tel" id="phone" class="form-size"/>
-              <span for="phone" class="icon-label">
                 <svg class="icon-form">
                   <use href="./img/icon-sprite.svg#icon-phone-black-18dp-2"></use>
                 </svg>
-              </span>
             </div>
 
             <div class="form-field">
               <label for="email" class="title-label">Email</label>
               <input type="email" id="email" class="form-size"/>
-              <span for="email" class="icon-label">
                 <svg class="icon-form">
                   <use href="./img/icon-sprite.svg#icon-email-black-18dp-2"></use>
                 </svg>
-              </span>
             </div>
             
               <div class="form-field">
@@ -404,9 +406,17 @@
               <textarea class="comment" name="comment" id="comment" cols="30" rows="10" placeholder="Text input"></textarea>
               </div>
             
-              <input type="checkbox" class="policy" id="policy" />
-              <label for="policy">
-                <span class="text-policy">I accept the terms and conditions of the <a href="">Privacy Policy</span>
+              
+              <label class="label-checkbox">
+                <input type="checkbox" class="policy"/>
+
+                    <svg class="checkbox">
+                      <use href="./img/symbol-defs.svg#icon-click"></use>
+                    </svg>
+                    
+                <span class="icon-policy"></span>
+                <span class="text-policy">I accept the terms and conditions of the 
+                  <a href="">Privacy Policy</a></span>
               </label>
 
               <button type="submit" class="send"><span class="send-content">Send</span></button>
@@ -434,7 +444,7 @@
         <ul class="list-footer team-svg">
           <a href="" class="svg-icon-footer">
             <li>
-              <svg class="svg-icon-team">
+              <svg class="svg-icon-img">
             <use href="./img/sprite.svg#icon-instagram-2">
             </use>
           </svg>
@@ -442,7 +452,7 @@
           </a>
           <a href="" class="svg-icon-footer">
             <li>
-              <svg class="svg-icon-team">
+              <svg class="svg-icon-img">
             <use href="./img/sprite.svg#icon-twitter-1">
             </use>
           </svg>
@@ -450,7 +460,7 @@
           </a>
             <a href="" class="svg-icon-footer">
             <li>
-              <svg class="svg-icon-team">
+              <svg class="svg-icon-img">
             <use href="./img/sprite.svg#icon-facebook-1">
             </use>
           </svg>
@@ -458,7 +468,7 @@
           </a>
             <a href="" class="svg-icon-footer">
             <li>
-              <svg class="svg-icon-team">
+              <svg class="svg-icon-img">
             <use href="./img/sprite.svg#icon-linkedin-1">
             </use>
           </svg>
@@ -466,8 +476,8 @@
           </a>
         </ul>
     </div>
-    
-    <!-- form footer -->
+
+        <!-- form footer -->
 
   <div class="modal-footer">
     <p class="text-modal-footer">Subscribe</p>

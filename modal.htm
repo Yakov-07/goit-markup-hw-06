@@ -1,11 +1,295 @@
+/* form */
+
+.form {
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 8px;
+}
+
+.form-title {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+  margin-bottom: 14px;
+}
+
+.send {
+  display: block;
+  background: #4d5ae5;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: transparent;
+  cursor: pointer;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 24px;
+  margin-top: 24px;
+
+  width: 169px;
+  height: 56px;
+}
+
+.send-content {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+
+  color: #ffffff;
+}
+
+.form-field label {
+  margin-bottom: 4px;
+}
+
+.form-field textarea::placeholder {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.3;
+  letter-spacing: 0.04em;
+
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.form-size {
+  width: 360px;
+  height: 40px;
+  padding-left: 38px;
+}
+
+.text-policy {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.3;
+  letter-spacing: 0.04em;
+
+  color: #757575;
+}
+
+.comment {
+  width: 360px;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  resize: none;
+}
+
+.comment::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.3;
+  letter-spacing: 0.04em;
+  color: rgba(117, 117, 117, 0.5);
+
+  margin-left: 16px;
+  margin-top: 8px;
+}
+
+.comment:focus {
+  outline-color: rgba(77, 90, 229, 1);
+}
+
+.icon-form {
+  width: 18px;
+  /* 
+  transform: translateY(-20%);
+  position: absolute;
+  display: inline-block;
+
+  margin-left: 19px; */
+}
+
+.icon-label {
+  margin: 0;
+  width: 18px;
+
+  transform: translateY(-25%);
+  position: absolute;
+  display: inline-block;
+
+  margin-left: 19px;
+}
+
+.form-size:focus + .icon-label {
+  outline-color: rgba(77, 90, 229, 1);
+  fill: rgba(77, 90, 229, 1);
+}
+
+.form-size:focus {
+  outline-color: rgba(77, 90, 229, 1);
+}
+
+.title-label {
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: #8e8f99;
+}
+
+.privacy {
+  
+}
+
+/* form footer */
+
+.modal-footer {
+  margin-left: 80px;
+}
+
+.text-modal-footer {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+
+  margin-bottom: 16px;
+}
+
+.form-footer input {
+  background-color: var(--title-text-color);
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  width: 264px;
+  height: 40px;
+}
+
+.form-footer input::placeholder {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+
+  padding-left: 16px;
+
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.submit-footer {
+  background: #4d5ae5;
+  border-radius: 4px;
+  width: 165px;
+  height: 40px;
+  border: transparent;
+  margin-left: 24px;
+}
+
+.text-submit-footer {
+  display: flex;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  justify-content: center;
+
+  /* align-items: center;
+  text-align: center; */
+  letter-spacing: 0.04em;
+
+  color: #ffffff;
+}
+
+.icon-form-footer {
+  height: 20px;
+  width: 24px;
+  fill: #fff;
+  margin-left: 16px;
+}
+
+
 <!-- modal -->
       <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-          <button class="close" data-modal-close>
-            <svg><use></use></svg>
+          <button class="close" data-modal-close></button>
+          <h1 class="form-title">Leave your contacts and we will call you back</h1>
+          <div>
+          <form class="form">
+            <div class="form-field">
+              <label for="name" class="title-label">Name</label>
+              </label>
+                <input type="text" name="Name" id="name" class="form-size"/>
+              
+              <span for="name" class="icon-label">
+                <svg class="icon-form">
+                  <use href="./img/icon-sprite.svg#icon-person-black-18dp-1"></use>
+                </svg>
+              </span>
+            </div>
+
+            <div class="form-field">
+              <label for="phone" class="title-label">Phone</label>
+              <input type="tel" id="phone" class="form-size"/>
+              <span for="phone" class="icon-label">
+                <svg class="icon-form">
+                  <use href="./img/icon-sprite.svg#icon-phone-black-18dp-2"></use>
+                </svg>
+              </span>
+            </div>
+
+            <div class="form-field">
+              <label for="email" class="title-label">Email</label>
+              <input type="email" id="email" class="form-size"/>
+              <span for="email" class="icon-label">
+                <svg class="icon-form">
+                  <use href="./img/icon-sprite.svg#icon-email-black-18dp-2"></use>
+                </svg>
+              </span>
+            </div>
+            
+              <div class="form-field">
+                <label for="comment" class="title-label">Comment</label>
+              <textarea class="comment" name="comment" id="comment" cols="30" rows="10" placeholder="Text input"></textarea>
+              </div>
+            
+              <input type="checkbox" class="policy" id="policy" />
+              <label for="policy">
+                <span class="text-policy">I accept the terms and conditions of the <a href="">Privacy Policy</span>
+              </label>
+
+              <button type="submit" class="send"><span class="send-content">Send</span></button>
+          </form>
+
           </button>
+          </div>
         </div>
       </div>
     </main>
 
-        <script src="./js/modal.js"></script>
+
+     <!-- form footer -->
+
+  <div class="modal-footer">
+    <p class="text-modal-footer">Subscribe</p>
+    <form class="form-footer">
+     <input type="text" placeholder="E-mail" />
+     <button type="submit" class="submit-footer">
+      <span class="text-submit-footer">Subscribe
+        <svg class="icon-form-footer">
+          <use href="./img/icon-sprite.svg#icon-icon-send"></use>
+        </svg>
+      </span>
+    </button>
+    </form>
+  </div>
+
+    </div>
+      </div>
+    </footer>
+    <script src="./js/modal.js"></script>
+  </body>
+</html>
